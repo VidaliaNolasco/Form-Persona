@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de personal</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de estudaintes</h1>
+        <f:view>
+            <h:form>
+                <h:panelGrid>
+                    <h:outputText value="Id"></h:outputText>
+                    <h:inputTextarea value="#{estJSFManagedBean.est.Id}"></h:inputTextarea>
+                    <h:outputText value="Nombre"></h:outputText>
+                    <h:inputTextarea value="#{estJSFManagedBean.est.Nombre}"></h:inputTextarea>
+                    <h:outputText value="seccion"></h:outputText>
+                    <h:inputTextarea value="#{estJSFManagedBean.est.Seccion}"></h:inputTextarea>
+                    <h:outputText value="Email"></h:outputText>
+                    <h:inputTextarea value="#{estJSFManagedBean.est.Email}"></h:inputTextarea>
+                    
+                </h:panelGrid>
+                <h:commandButton value="validar" action="#{estJSFManagedBean.validar()}"/>
+                <h:commandButton value="modificar" action="#{estJSFManagedBean.modificar()}"/>
+                <h:commandButton value="Eliminar" action="#{estJSFManagedBean.suprimir()}"/>
+            </h:form>
+        </f:view>
+            
+    </h:body>
+</html>
